@@ -15,28 +15,28 @@ partnerSugestions.push(
     "Bradley Hunter",
     "Based in Chicago, i love playing tennis and loud music.",
     "./img/partners/Bradley.png",
-    "./img/partners-icons/music2.png",
+    "./img/partners-Icons/music2.png",
     1
   ),
   new Partner(
     "Marie Bennet",
     "Currently living in Colorado. Lover of art, languages and travelling.",
     "./img/partners/Marie.png",
-    "./img/partners-icons/brush.png",
+    "./img/partners-Icons/brush.png",
     2
   ),
   new Partner(
     "Diana Wells",
     "Living in Athens, Greece. I love black and white classics, chillout music and green tea.",
     "./img/partners/Diana.png",
-    "./img/partners-icons/camera.png",
+    "./img/partners-Icons/camera.png",
     3
   ),
   new Partner(
     "Christopher Pierce",
     "Star Wars fanatic. I have a persistent enthusiasm to create new things.",
     "./img/partners/Christopher.png",
-    "./img/partners-icons/airplane.png",
+    "./img/partners-Icons/airplane.png",
     4
   )
 );
