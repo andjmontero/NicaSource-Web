@@ -1,0 +1,516 @@
+@import "_variables.scss";
+@import "_mixins";
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.subtitle {
+  @include sectionHeader;
+  @include mobile {
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }
+}
+div {
+  box-sizing: border-box;
+}
+.hero {
+  color: $veryLightGrey;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  box-sizing: border-box;
+  @include backgroundImg;
+  @include mobile {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../img/hero-mobile.png");
+  }
+}
+.hero-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 15% 0 15%;
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
+  .brand {
+    @include mobile {
+      text-align: center;
+      margin: 0px;
+      padding: 20px 0 20px 0;
+    }
+  }
+  button {
+    @include roboto;
+    background-color: transparent;
+    outline: none;
+    color: $veryLightGrey;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .user {
+    padding: 10px;
+    @include mobile {
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    .sign {
+      border: solid 2px $veryLightPink;
+      border-radius: 20px;
+      padding: 8px;
+      width: 90px;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes buttonAura {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: -2px 3px 37px 10px rgba(255, 255, 255, 0.68);
+    -webkit-box-shadow: -2px 3px 37px 10px rgba(255, 253, 253, 0.68);
+    -moz-box-shadow: -2px 3px 37px 10px rgba(255, 255, 255, 0.68);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+.hero-text {
+  margin: auto;
+  text-align: center;
+  @include mobile {
+    margin: 0px;
+  }
+  h1 {
+    font-size: 52px;
+    color: white;
+    margin-bottom: 0px;
+    animation-name: fadeIn;
+    animation-duration: 8s;
+    @include mobile {
+      font-size: 30px;
+      margin: 0;
+      padding: 18px 0 18px 0;
+    }
+  }
+  p {
+    @include roboto;
+    font-size: 24px;
+    color: $veryLightPink;
+    @include mobile {
+      margin: 0px;
+      padding: 30px 0 30px 0;
+      font-size: 18px;
+    }
+  }
+  button {
+    background-color: $lightRed;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: $veryLightGrey;
+    @include montserrat;
+    cursor: pointer;
+    animation-name: buttonAura;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    @include mobile {
+      width: 300px;
+    }
+  }
+}
+
+.how-it-works {
+  padding: 50px 10px 0px 10px;
+  @include mobile {
+    padding: 50px 0px 0px 0px;
+  }
+  h2 {
+    @include sectionHeader;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .steps {
+      text-align: left;
+      height: 440px;
+      width: 290px;
+      min-width: 290px;
+      flex-direction: column;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 10px;
+      justify-content: left;
+      align-items: flex-start;
+      @include tablet {
+        width: 250px;
+      }
+      @include mobile {
+        width: 90%;
+        min-width: 100px;
+        height: 250px;
+      }
+
+      h6 {
+        margin: 2px;
+        color: $veryLightPink;
+        text-align: center;
+        background-color: $lightRed;
+        padding: 5px;
+        border-radius: 12px;
+        width: 60px;
+        letter-spacing: 2px;
+        @include roboto;
+      }
+      h3 {
+        margin-bottom: 0;
+        color: $veryLightGrey;
+        font-size: 28px;
+        margin-top: 10px;
+      }
+
+      p {
+        color: $veryLightGrey;
+        font-size: 14px;
+        @include roboto;
+      }
+    }
+    .step1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../img/steps/Step1.png");
+    }
+    .step2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../img/steps/Step2.png");
+    }
+    .step3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../img/steps/Step3.png");
+    }
+  }
+}
+.first {
+  flex-grow: 7;
+}
+.second {
+  flex-grow: 1/2;
+}
+.thrid {
+  flex-grow: 4;
+}
+
+.partners-section {
+  padding: 50px 40px 0px 40px;
+  text-align: center;
+  @include tablet {
+    padding: 40px 120px 0px 120px;
+  }
+  @include mobile {
+    padding: 50px 0px 0px 0px;
+  }
+  .partners {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .partner-card {
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    min-width: 250px;
+    max-width: 250px;
+    h5 {
+      color: $darkerGrey;
+    }
+    p {
+      margin: 2px;
+      word-wrap: break-word;
+      @include bodyText;
+      font-size: 15px;
+    }
+  }
+  button {
+    outline: none;
+    color: $lightRed;
+    background-color: white;
+    border: solid 2px $lightRed;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 50px;
+    @include montserrat;
+    @include mobile {
+      margin: 20px;
+    }
+  }
+}
+.discover-section {
+  h2 {
+    @include sectionHeader;
+    @include mobile {
+      margin-bottom: 0px;
+    }
+  }
+}
+.img-container {
+  padding: 0 100px 0 100px;
+  @include mobile {
+    padding: 0px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    .img {
+      height: 300px;
+      width: 280px;
+      border-radius: 5px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      @include sectionHeader;
+      @include backgroundImg;
+      @include mobile {
+        width: 90%;
+        height: 150px;
+        margin-bottom: 0px;
+      }
+
+      h4 {
+        color: white;
+      }
+    }
+    .sports {
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    .img-grow {
+      width: 580px;
+      @include mobile {
+        width: 90%;
+      }
+    }
+    .img1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/Sports.png");
+    }
+    .img2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/Wellness.png");
+    }
+    .img3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/Extreme.png");
+    }
+    .img4 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/Games.png");
+    }
+    .img5 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/culture.png");
+    }
+    .img6 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/enjoymentRelaxation.png");
+    }
+    .img7 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../img/discover/Traveling.png");
+    }
+  }
+}
+.holiday-section {
+  padding: 50px 0 60px 0;
+  text-align: center;
+  h3 {
+    font-size: 18px;
+    @include bodyText;
+  }
+  .input {
+    width: 240px;
+    padding: 9px;
+    outline: none;
+    border: solid 2px $brownishGrey;
+    border-radius: 3px;
+    box-sizing: border-box;
+    @include mobile {
+      width: 80%;
+    }
+  }
+  #search {
+    width: 160px;
+    background-color: $lightRed;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    @include montserrat;
+    @include mobile {
+      width: 80%;
+      margin-top: 10px;
+    }
+  }
+}
+footer {
+  text-align: center;
+  border-top: solid 2px $lightRed;
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+  }
+  h6 {
+    color: $darkerGrey;
+    font-size: 14px;
+    margin: 0px 0px 10px 0px;
+  }
+  h5 {
+    margin-top: 0px;
+    font-size: 15px;
+    @include mobile {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    margin-top: 0px;
+  }
+  .dreamshare {
+    flex-grow: 2;
+    color: $lightRed;
+    @include roboto;
+  }
+  .company {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+    @include mobile {
+      padding: 0 30px 0 30px;
+      text-align: center;
+    }
+    h6 {
+      @include mobile {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      color: $brownishGrey;
+      @include roboto;
+      li {
+        margin-bottom: 5px;
+        @include mobile {
+          display: inline-block;
+          font-size: 16px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+  .partners-footer {
+    flex-grow: 1;
+    text-align: left;
+    h6 {
+      @include mobile {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  }
+  .designed-by {
+    flex-grow: 2;
+    @include montserrat;
+    .designed {
+      color: $veryLightPink;
+      font-size: 12px;
+      margin: 0px;
+      @include mobile {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    h4 {
+      color: $lightRed;
+      font-size: 20px;
+      margin: 0px;
+
+      letter-spacing: 2px;
+    }
+  }
+  .development {
+    color: $lightRed;
+  }
+  font-size: 8px;
+}
+.icono {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 85px;
+  right: 64px;
+}
+#icon-1 {
+  background-color: $lightRed;
+}
+#icon-2 {
+  background-color: $aqua;
+}
+#icon-3 {
+  background-color: $yellowishOrange;
+}
+#icon-4 {
+  background-color: $cornFlower;
+}
